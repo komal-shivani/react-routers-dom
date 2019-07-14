@@ -18,20 +18,18 @@ class PostShow extends React.Component{
         const id=this.props.match.params.id
         axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
         .then(response=>{
-             this.setState(()=>({post:response.data}))
+            this.setState(()=>({post:response.data}))
 
-        
-            axios.get(`https://jsonplaceholder.typicode.com/users/${this.state.post.userId}`)
-            .then(response=>{
-                this.setState(()=>({user:response.data}))
+        axios.get(`https://jsonplaceholder.typicode.com/users/${this.state.post.userId}`)
+        .then(response=>{
+            this.setState(()=>({user:response.data}))
             })
-         
         })
     
-       axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${id}`)
-       .then(response=>{
+        axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${id}`)
+        .then(response=>{
            this.setState(()=>({comments:response.data}))
-       })
+        })
     }
     render(){
         return(
@@ -51,8 +49,7 @@ class PostShow extends React.Component{
                         </li>  
                     })}
                 </ul>
-                <h2>name:{this.state.user.name}</h2>
-                
+                <h2>name:{this.state.user.name}</h2>  
             </div>
         )
     }

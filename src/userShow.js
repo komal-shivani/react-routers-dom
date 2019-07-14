@@ -11,7 +11,6 @@ class UserShow extends React.Component{
     }
     componentDidMount(){
         const id=this.props.match.params.id
-        
         axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then(response=>{
             console.log(response)

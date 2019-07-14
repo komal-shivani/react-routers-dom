@@ -2,8 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 
-
-
 class Users extends React.Component{
     constructor(){
         super()
@@ -14,7 +12,6 @@ class Users extends React.Component{
 
     componentDidMount(){
         //ajax request or API call to the server
-
         axios.get('http://jsonplaceholder.typicode.com/users')
         .then((response)=>{
             console.log(response.data)
@@ -22,7 +19,6 @@ class Users extends React.Component{
                 users:response.data
             }))
         })
-
     }
     render(){
         return(

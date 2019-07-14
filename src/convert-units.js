@@ -1,5 +1,4 @@
 import React from 'react'
-// import convert from 'convert-units'
 
 class Convertunits extends React.Component{
     constructor(){
@@ -39,10 +38,7 @@ class Convertunits extends React.Component{
                          onChange={this.inputHnadle}/>
                     </label>
                     <br/>
-                   
-                    {/*   value={this.state.convertedUnit} */}
                     <select onChange={this.convertunitHandle}>
-                    
                     <option value="">select-unit</option>
                     <option value="km">kilometer</option>
                     <option value="cm">centimeter</option>

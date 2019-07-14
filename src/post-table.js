@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
-class Posttable extends React.Component{
+class PostTable extends React.Component{
     constructor(){
         super()
         this.state={
@@ -20,7 +20,7 @@ class Posttable extends React.Component{
     render(){
         return(
             <div><h2>Listing Posts-{this.state.posts.length}</h2>
-                <table>
+                <table border="1">
                     <thead>
                         <tr>
                             <th>id</th>
@@ -37,10 +37,7 @@ class Posttable extends React.Component{
                               <td>{post.title}</td>
                               <td>{post.body}</td>
                               </tr>
-
-  
-                      })}
-                      
+                      })} 
                 </tbody>
                 </table>
             </div>
@@ -48,4 +45,4 @@ class Posttable extends React.Component{
     }
 }
 
-export default Posttable
+export default PostTable

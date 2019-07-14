@@ -18,14 +18,15 @@
             handleSubmit=(e)=>{
                 e.preventDefault()
                 const formData={
-                    name:this.state.name }
+                    name:this.state.name 
+                }
                  console.log(formData)
               
                 let names=this.state.name
                 let words=names.split('')
                 let output='#'
                 for(let i=0;i<words.length;i++){
-                   output=output+words[i].slice(0)
+                   output+=words[i].slice(0)
                   }
                 const res=output
                 this.setState(()=>({res})) 

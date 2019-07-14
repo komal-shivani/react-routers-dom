@@ -9,7 +9,7 @@ class Posts extends React.Component{
             posts:[]
         }
     }
-
+    
     componentDidMount(){
         axios.get(`http://jsonplaceholder.typicode.com/posts`)
         .then((response)=>{
